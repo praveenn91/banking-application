@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <h1>Welcome admin : {{ userName }}</h1>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid justify-content-start">
+        <a class="nav-link active px-2" [routerLink]="['/admin-dashboard']"
+          >Home</a
+        >
+        <a
+          class="nav-link active px-2"
+          [routerLink]="['/admin-dashboard/clients']"
+          >Clients</a
+        >
+        <a
+          class="nav-link active px-2"
+          [routerLink]="['/admin-dashboard/credit-card-companies']"
+          >Credit Card Companies</a
+        >
+        <a
+          class="nav-link active px-2"
+          [routerLink]="['/admin-dashboard/institutions']"
+          >Institutions</a
+        >
+      </div>
+    </nav>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Welcome to banking application</span>
+      <button mat-button [matMenuTriggerFor]="menu" class="example-icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="admin()">Admin</button>
+        <button mat-menu-item (click)="client()">Client</button>
+        <button mat-menu-item (click)="creditCard()">Credit card</button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div>Banking Application...</div>
+</div>
