@@ -1,1 +1,58 @@
-<p>clients works!</p>
+<div>
+  <div class="m-4" align="end">
+    <label for="search">Search</label>
+    <input mat-input type="text" class="m-4" [(ngModel)]="filter" />
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/admin-dashboard/add-new-client']"
+    >
+      Add new client
+    </button>
+  </div>
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div
+            class="col-10 d-flex flex-wrap justify-content-between align-items-center"
+          >
+            <div>
+              <div>name</div>
+              <div>praveen</div>
+            </div>
+            <div>designation</div>
+            <div>work</div>
+          </div>
+          <div
+            class="col-2 d-flex flex-wrap justify-content-between align-items-center"
+          >
+            <button mat-raised-button color="primary">Edit</button>
+            <button mat-raised-button color="warn">Delete</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div
+            class="col-10 d-flex flex-wrap justify-content-between align-items-center"
+          >
+            <div>
+              <div>name</div>
+              <div>praveen</div>
+            </div>
+            <div>designation</div>
+            <div>work</div>
+          </div>
+          <div
+            class="col-2 d-flex flex-wrap justify-content-between align-items-center"
+          >
+            <button mat-raised-button color="primary">Edit</button>
+            <button mat-raised-button color="warn">Delete</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

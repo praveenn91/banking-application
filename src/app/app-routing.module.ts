@@ -6,6 +6,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { ClientsComponent } from './components/clients/clients.component';
 import { CreditCardCompaniesComponent } from './components/credit-card-companies/credit-card-companies.component';
 import { InstitutionsComponent } from './components/institutions/institutions.component';
+import { AddNewClientComponent } from './components/add-new-client/add-new-client.component';
 
 @NgModule({
   declarations: [],
@@ -24,6 +25,7 @@ import { InstitutionsComponent } from './components/institutions/institutions.co
             component: CreditCardCompaniesComponent,
           },
           { path: 'institutions', component: InstitutionsComponent },
+          { path: 'add-new-client', component: AddNewClientComponent },
         ],
       },
     ]),

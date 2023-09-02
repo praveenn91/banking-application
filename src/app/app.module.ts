@@ -7,12 +7,13 @@ import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AppMaterialModule } from './app-material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { CreditCardCompaniesComponent } from './components/credit-card-companies/credit-card-companies.component';
 import { InstitutionsComponent } from './components/institutions/institutions.component';
+import { AddNewClientComponent } from './components/add-new-client/add-new-client.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { InstitutionsComponent } from './components/institutions/institutions.co
     ClientsComponent,
     CreditCardCompaniesComponent,
     InstitutionsComponent,
+    AddNewClientComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { InstitutionsComponent } from './components/institutions/institutions.co
     AppMaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

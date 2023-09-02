@@ -42,7 +42,7 @@ export class LoginComponent {
           });
           if (isAdminValid.length !== 0) {
             this.route.navigate(['/admin-dashboard'], {
-              state: { name: this.loginForm.value.email },
+              state: { name: isAdminValid[0].userName },
             });
           } else {
             this.route.navigate(['/']);
