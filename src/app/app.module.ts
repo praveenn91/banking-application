@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { CreditCardCompaniesComponent } from './components/credit-card-companies/credit-card-companies.component';
+import { InstitutionsComponent } from './components/institutions/institutions.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CreditCardCompaniesComponent } from './components/credit-card-companies
     AdminDashboardComponent,
     ClientsComponent,
     CreditCardCompaniesComponent,
+    InstitutionsComponent,
   ],
   imports: [
     BrowserModule,
