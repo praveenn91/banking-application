@@ -17,6 +17,6 @@ export class InstitutionsComponent implements OnInit {
   }
 
   deleteInstitutions(data: any) {
-    this.dataService.deleteInstitutions(data.id);
+    this.dataService.deleteInstitutions(data.id).subscribe((res) => res);
   }
 }

@@ -28,9 +28,13 @@ export class AddCreditCardCompaniesInstitutionsComponent {
 
   onSubmit() {
     if (this.currentPage === 'institutions') {
-      this.dataService.addInstitution(this.addForm.value);
+      this.dataService
+        .addInstitution(this.addForm.value)
+        .subscribe((res) => res);
     } else {
-      this.dataService.addCreditCardComapanies(this.addForm.value);
+      this.dataService
+        .addCreditCardComapanies(this.addForm.value)
+        .subscribe((res) => res);
     }
   }
 

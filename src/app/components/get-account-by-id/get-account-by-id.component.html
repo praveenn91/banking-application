@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <label for="input" class="form-label m-3">Get account by Id</label>
+    <input type="text" class="me-3" #accountId />
+    <button (click)="getAccountBtn(accountId)">Get Account</button>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Account no</th>
+          <th scope="col">Account balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ account?.id }}</td>
+          <td>{{ account?.firstName }} {{ account?.lastName }}</td>
+          <td>{{ account?.phoneNumber }}</td>
+          <td>{{ account?.email }}</td>
+          <td>{{ account?.accountNumberGenerated }}</td>
+          <td>{{ account?.currentAccountBalance }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,3 +1,42 @@
 <div>
   <h1>Welcome client: {{ userName }}</h1>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid justify-content-start">
+      <a class="nav-link px-2" [routerLink]="['']">Home</a>
+      <button mat-button [matMenuTriggerFor]="menu">Transactions</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <a
+            class="nav-link"
+            [routerLink]="['/client-dashboard/new-transaction']"
+            >New Transaction</a
+          >
+        </button>
+        <button mat-menu-item>Deposit</button>
+        <button mat-menu-item>Fund transfer</button>
+        <button mat-menu-item>Withdrawal</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="accounts">Accounts</button>
+      <mat-menu #accounts="matMenu">
+        <button mat-menu-item>
+          <a class="nav-link" [routerLink]="['/client-dashboard/account-by-id']"
+            >Get account by Id</a
+          >
+        </button>
+        <button mat-menu-item>
+          <a class="nav-link" [routerLink]="['/client-dashboard/athentication']"
+            >Athentication</a
+          >
+        </button>
+      </mat-menu>
+      <a
+        class="nav-link px-2"
+        [routerLink]="['/login']"
+        routerLinkActive="active"
+        [queryParams]="{ page: 'client' }"
+        >Logout</a
+      >
+    </div>
+  </nav>
 </div>
+<router-outlet></router-outlet>

@@ -16,15 +16,15 @@
         <tr>
           <th scope="col"></th>
           <th scope="col">Name</th>
-          <th scope="col">Address</th>
+          <th scope="col">Discription</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let institute of institutions | searchFilter : filter">
           <td></td>
-          <td>{{ institute.name }}</td>
-          <td>{{ institute.address }}</td>
+          <td>{{ institute.institutionName }}</td>
+          <td>{{ institute.discription }}</td>
           <td>
             <button
               type="button"

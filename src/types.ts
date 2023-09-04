@@ -15,7 +15,7 @@ export interface Form {
   firstName: string;
   lastName: string;
   email: string;
-  phoneNumber: string;
+  phoneNumber: any;
   address: string;
   id?: number;
 }

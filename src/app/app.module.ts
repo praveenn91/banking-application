@@ -18,6 +18,9 @@ import { SearchFilterPipe } from './search-filter.pipe';
 import { AddCreditCardCompaniesInstitutionsComponent } from './components/add-credit-card-companies-institutions/add-credit-card-companies-institutions.component';
 import { ClientDashboardComponent } from './components/client-dashboard/client-dashboard.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { GetAccountByIdComponent } from './components/get-account-by-id/get-account-by-id.component';
+import { AthenticationComponent } from './components/athentication/athentication.component';
+import { NewTransactionComponent } from './components/new-transaction/new-transaction.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { RegistrationComponent } from './components/registration/registration.co
     AddCreditCardCompaniesInstitutionsComponent,
     ClientDashboardComponent,
     RegistrationComponent,
+    GetAccountByIdComponent,
+    AthenticationComponent,
+    NewTransactionComponent,
   ],
   imports: [
     BrowserModule,

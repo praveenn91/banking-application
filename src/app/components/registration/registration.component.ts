@@ -11,7 +11,9 @@ export class RegistrationComponent {
 
   constructor() {
     this.registrationForm = new FormGroup({
-      userName: new FormControl(''),
+      firstName: new FormControl(''),
+      lastName: new FormControl(''),
+      phoneNumber: new FormControl(''),
       email: new FormControl(''),
       password: new FormControl(''),
       confirmPassword: new FormControl(''),

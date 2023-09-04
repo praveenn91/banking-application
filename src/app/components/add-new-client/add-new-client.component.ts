@@ -24,7 +24,6 @@ export class AddNewClientComponent {
   ) {}
   ngOnInit() {
     this.clientForm = new FormGroup({
-      id: new FormControl(''),
       firstName: new FormControl(''),
       lastName: new FormControl(''),
       email: new FormControl(''),
@@ -45,13 +44,21 @@ export class AddNewClientComponent {
   }
 
   onSubmit() {
-    console.log(this.clientForm.value);
     if (this.clientForm.valid && this.clientData.id) {
       const formValues = this.clientForm.value;
-      const updatedValues = { ...formValues, id: this.clientData.id };
-      this.dataService.updateClient(updatedValues);
+      const updatedValues = {
+        id: this.clientData.id,
+        firstName: this.clientForm.value.firstName,
+        lastName: this.clientForm.value.lastName,
+        email: this.clientForm.value.email,
+        phoneNumber: parseInt(this.clientForm.value.phoneNumber),
+        address: this.clientForm.value.address,
+      };
+      this.dataService.updateClient(updatedValues).subscribe((res) => res);
     } else {
-      this.dataService.addClient(this.clientForm.value);
+      this.dataService
+        .addClient(this.clientForm.value)
+        .subscribe((data) => console.log(data));
     }
   }
 

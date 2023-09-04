@@ -88,4 +88,28 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+
+  getAccountById(id: any) {
+    const url = `url/${id}`;
+    return this.http.get(url).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
+
+  athenticationAddress(data: any) {
+    const url = `url?athentication=${data.athentication}&password=${data.password}`;
+    return this.http.get(url).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
+
+  addNewTransaction(data: any) {
+    const url = '';
+    return this.http.post(url, data).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
 }
