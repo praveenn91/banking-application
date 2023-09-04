@@ -77,4 +77,7 @@ export class LoginComponent {
       );
     }
   }
+  register() {
+    this.route.navigate(['/register']);
+  }
 }

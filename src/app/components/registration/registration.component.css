@@ -1,0 +1,13 @@
+.login-form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mat-mdc-card {
+    width: 30%;
+    min-width: 250px;
+    padding: 1.5em;
+    border-radius: 10px;
+  }
+}

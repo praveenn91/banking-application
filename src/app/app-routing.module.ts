@@ -9,6 +9,7 @@ import { InstitutionsComponent } from './components/institutions/institutions.co
 import { AddNewClientComponent } from './components/add-new-client/add-new-client.component';
 import { AddCreditCardCompaniesInstitutionsComponent } from './components/add-credit-card-companies-institutions/add-credit-card-companies-institutions.component';
 import { ClientDashboardComponent } from './components/client-dashboard/client-dashboard.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { ClientDashboardComponent } from './components/client-dashboard/client-d
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegistrationComponent },
       {
         path: 'admin-dashboard',
         component: AdminDashboardComponent,

@@ -24,6 +24,7 @@ export class AddNewClientComponent {
   ) {}
   ngOnInit() {
     this.clientForm = new FormGroup({
+      id: new FormControl(''),
       firstName: new FormControl(''),
       lastName: new FormControl(''),
       email: new FormControl(''),
@@ -33,6 +34,7 @@ export class AddNewClientComponent {
     this.activatedRoute.paramMap.subscribe(() => {
       this.clientData = history.state;
       this.clientForm.setValue({
+        id: history.state.id,
         firstName: history.state.firstName,
         lastName: history.state.lastName,
         email: history.state.email,

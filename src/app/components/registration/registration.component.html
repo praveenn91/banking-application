@@ -1,0 +1,50 @@
+<div class="login-form">
+  <mat-card>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userName">User name</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="userName"
+          placeholder="Enter email"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter email"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group my-3">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="confirmPassword"
+          placeholder="Password"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary cursor-pointer mx-3">
+        <a class="nav-link" [routerLink]="['/login']">Submit</a>
+      </button>
+    </form>
+  </mat-card>
+</div>
