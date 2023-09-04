@@ -1,1 +1,41 @@
-<p>institutions works!</p>
+<div>
+  <div class="m-4" align="end">
+    <label for="search">Search</label>
+    <input mat-input type="text" class="m-4" [(ngModel)]="filter" />
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/admin-dashboard/add-credit-card-companies-institutions']"
+      [queryParams]="{ form: 'institutions' }"
+    >
+      Add Institution
+    </button>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let institute of institutions | searchFilter : filter">
+          <td></td>
+          <td>{{ institute.name }}</td>
+          <td>{{ institute.address }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="deleteInstitutions(institute)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

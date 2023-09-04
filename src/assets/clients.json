@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "firstName": "praveen",
+      "lastName": "kappa",
+      "email": "praveen@gmail.com",
+      "phoneNumber": "123123",
+      "address": "nellore"
+    },
+    {
+      "id": "2",
+      "firstName": "naveen",
+      "lastName": "kappa",
+      "email": "naveen@gmail.com",
+      "phoneNumber": "123123333",
+      "address": "nellore"
+    }
+  ]
+}

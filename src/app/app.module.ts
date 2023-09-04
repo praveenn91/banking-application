@@ -14,6 +14,9 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { CreditCardCompaniesComponent } from './components/credit-card-companies/credit-card-companies.component';
 import { InstitutionsComponent } from './components/institutions/institutions.component';
 import { AddNewClientComponent } from './components/add-new-client/add-new-client.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { AddCreditCardCompaniesInstitutionsComponent } from './components/add-credit-card-companies-institutions/add-credit-card-companies-institutions.component';
+import { ClientDashboardComponent } from './components/client-dashboard/client-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { AddNewClientComponent } from './components/add-new-client/add-new-clien
     CreditCardCompaniesComponent,
     InstitutionsComponent,
     AddNewClientComponent,
+    SearchFilterPipe,
+    AddCreditCardCompaniesInstitutionsComponent,
+    ClientDashboardComponent,
   ],
   imports: [
     BrowserModule,

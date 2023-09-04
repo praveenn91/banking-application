@@ -10,5 +10,12 @@
       "password": "naveen123",
       "userName": "naveen"
     }
+  ],
+  "clients": [
+    {
+      "email": "praveennkappa@gmail.com",
+      "userName": "praveen",
+      "password": "123"
+    }
   ]
 }

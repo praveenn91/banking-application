@@ -54,5 +54,8 @@
         Submit
       </button>
     </form>
+    <mat-error *ngIf="errorMessage" class="danger">
+      User credentials are not valid
+    </mat-error>
   </mat-card>
 </div>

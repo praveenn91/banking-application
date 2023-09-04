@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
 
-  admin() {
-    this.router.navigate(['/login'], { state: { user: 'admin' } });
-  }
+  // admin() {
+  //   this.router.navigate(['/login'], { state: { user: 'admin' } });
+  // }
 
   client() {}
 

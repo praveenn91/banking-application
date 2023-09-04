@@ -1,1 +1,45 @@
-<p>credit-card-companies works!</p>
+<div>
+  <div class="m-4" align="end">
+    <label for="search">Search</label>
+    <input mat-input type="text" class="m-4" [(ngModel)]="filter" />
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/admin-dashboard/add-credit-card-companies-institutions']"
+      [queryParams]="{ form: 'creditCardComapany' }"
+    >
+      Add Credit card company
+    </button>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let creditCardCompany of creditCardCompanies | searchFilter : filter
+          "
+        >
+          <td></td>
+          <td>{{ creditCardCompany.name }}</td>
+          <td>{{ creditCardCompany.address }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="deleteCreditCardCompany(creditCardCompany)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
