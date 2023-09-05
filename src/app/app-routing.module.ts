@@ -17,6 +17,8 @@ import { MakeDepositComponent } from './components/make-deposit/make-deposit.com
 import { MakeFundTransferComponent } from './components/make-fund-transfer/make-fund-transfer.component';
 import { WithDrawalComponent } from './components/with-drawal/with-drawal.component';
 import { MainCreditCardCompanyComponent } from './components/main-credit-card-company/main-credit-card-company.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [],
@@ -58,6 +60,10 @@ import { MainCreditCardCompanyComponent } from './components/main-credit-card-co
       {
         path: 'main-credit-card-company',
         component: MainCreditCardCompanyComponent,
+        children: [
+          { path: 'products', component: ProductsComponent },
+          { path: 'feedback', component: FeedbackComponent },
+        ],
       },
     ]),
   ],

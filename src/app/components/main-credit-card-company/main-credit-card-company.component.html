@@ -1,1 +1,30 @@
-<p>main-credit-card-company works!</p>
+<div>
+  <div>
+    <h1>Welcome admin : {{ userName }}</h1>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid justify-content-start">
+        <a class="nav-link px-2" [routerLink]="['']">Home</a>
+        <a
+          class="nav-link px-2"
+          [routerLink]="['/main-credit-card-company/products']"
+          routerLinkActive="active"
+          >Products</a
+        >
+        <a
+          class="nav-link px-2"
+          [routerLink]="['/main-credit-card-company/feedback']"
+          routerLinkActive="active"
+          >Feedback</a
+        >
+        <a
+          class="nav-link px-2"
+          [routerLink]="['/login']"
+          routerLinkActive="active"
+          [queryParams]="{ page: 'credit-card' }"
+          >Logout</a
+        >
+      </div>
+    </nav>
+  </div>
+</div>
+<router-outlet></router-outlet>

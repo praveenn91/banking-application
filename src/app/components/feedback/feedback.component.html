@@ -1,0 +1,33 @@
+<div>
+  <div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">User Id</th>
+          <th scope="col">name</th>
+          <th scope="col">products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>
+            <table class="table">
+              <thead>
+                <th scope="col">product</th>
+                <th scope="col">feedback</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of user.products; let i = index">
+                  <td>{{ product.name }}</td>
+                  <td>{{ user.feedback[i].comment }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

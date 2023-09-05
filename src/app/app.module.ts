@@ -24,6 +24,9 @@ import { NewTransactionComponent } from './components/new-transaction/new-transa
 import { MakeDepositComponent } from './components/make-deposit/make-deposit.component';
 import { MakeFundTransferComponent } from './components/make-fund-transfer/make-fund-transfer.component';
 import { WithDrawalComponent } from './components/with-drawal/with-drawal.component';
+import { MainCreditCardCompanyComponent } from './components/main-credit-card-company/main-credit-card-company.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { WithDrawalComponent } from './components/with-drawal/with-drawal.compon
     MakeDepositComponent,
     MakeFundTransferComponent,
     WithDrawalComponent,
+    MainCreditCardCompanyComponent,
+    ProductsComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,
