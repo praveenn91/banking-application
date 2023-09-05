@@ -17,6 +17,12 @@ export class CreditCardCompaniesComponent {
   }
 
   deleteCreditCardCompany(data: any) {
-    this.dataService.deleteInstitutions(data.id).subscribe((res) => res);
+    this.dataService
+      .deleteInstitutions(data.id)
+      .subscribe(() =>
+        this.dataService
+          .getCreditCardCompanies()
+          .subscribe((data) => (this.creditCardCompanies = data))
+      );
   }
 }

@@ -17,6 +17,12 @@ export class InstitutionsComponent implements OnInit {
   }
 
   deleteInstitutions(data: any) {
-    this.dataService.deleteInstitutions(data.id).subscribe((res) => res);
+    this.dataService
+      .deleteInstitutions(data.id)
+      .subscribe(() =>
+        this.dataService
+          .getInstitutions()
+          .subscribe((data) => (this.institutions = data))
+      );
   }
 }

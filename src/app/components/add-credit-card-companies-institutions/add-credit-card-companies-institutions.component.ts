@@ -30,11 +30,9 @@ export class AddCreditCardCompaniesInstitutionsComponent {
     if (this.currentPage === 'institutions') {
       const formData = {
         institutionName: this.addForm.value.name,
-        discription: this.addForm.value.address,
+        description: this.addForm.value.address,
       };
-      this.dataService
-        .addInstitution(this.addForm.value)
-        .subscribe((res) => res);
+      this.dataService.addInstitution(formData).subscribe((res) => res);
     } else {
       this.dataService
         .addCreditCardComapanies(this.addForm.value)
