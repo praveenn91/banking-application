@@ -25,3 +25,29 @@
     </form>
   </mat-card>
 </div>
+<div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Account No</th>
+        <th scope="col">Account Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ athenticationUser?.id }}</td>
+        <td>
+          {{ athenticationUser?.firstName }} {{ athenticationUser?.lastName }}
+        </td>
+        <td>{{ athenticationUser?.phoneNumber }}</td>
+        <td>{{ athenticationUser?.email }}</td>
+        <td>{{ athenticationUser?.accountNumberGenerated }}</td>
+        <td>{{ athenticationUser?.currentAccountBalance }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

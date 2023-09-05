@@ -11,11 +11,12 @@ import { DataService } from 'src/app/data.service';
 export class RegistrationComponent {
   registrationForm!: FormGroup;
   userRole: any;
+  response: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private dataService: DataService,
-    private route: Router
+    private router: Router
   ) {
     this.registrationForm = new FormGroup({
       firstName: new FormControl(''),
@@ -33,16 +34,15 @@ export class RegistrationComponent {
       this.dataService
         .clientRegistration(this.registrationForm.value)
         .subscribe((res) => {
-          if (res) {
-            this.route.navigate(['/login'], {
-              queryParams: { page: 'client' },
-            });
-          }
+          this.response = res;
         });
-    } else if (this.userRole === 'admin') {
-      this.route.navigate(['/login'], { queryParams: { page: 'admin' } });
-    } else {
-      this.route.navigate(['/login'], { queryParams: { page: 'credit-card' } });
     }
+  }
+
+  goBack() {
+    this.router.navigate(['../login'], {
+      relativeTo: this.activatedRoute,
+      queryParams: { page: this.userRole },
+    });
   }
 }

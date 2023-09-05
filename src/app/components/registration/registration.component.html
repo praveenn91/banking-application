@@ -1,5 +1,6 @@
 <div class="login-form">
   <mat-card>
+    <button class="btn btn-secondary mt-4" (click)="goBack()">Back</button>
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="firstName">First name</label>
@@ -69,4 +70,28 @@
       </button>
     </form>
   </mat-card>
+</div>
+<div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Account No</th>
+        <th scope="col">Account Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ response?.id }}</td>
+        <td>{{ response?.firstName }} {{ response?.lastName }}</td>
+        <td>{{ response?.phoneNumber }}</td>
+        <td>{{ response?.email }}</td>
+        <td>{{ response?.accountNumberGenerated }}</td>
+        <td>{{ response?.currentAccountBalance }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

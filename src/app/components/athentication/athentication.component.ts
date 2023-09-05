@@ -9,7 +9,6 @@ import { DataService } from 'src/app/data.service';
 })
 export class AthenticationComponent {
   athenticationForm: FormGroup;
-  athenticationStatus = false;
   athenticationUser: any;
   constructor(private dataService: DataService) {
     this.athenticationForm = new FormGroup({
@@ -22,12 +21,7 @@ export class AthenticationComponent {
     this.dataService
       .athenticationAddress(this.athenticationForm.value)
       .subscribe((data) => {
-        if (data) {
-          this.athenticationStatus = true;
-          this.athenticationUser = data;
-        } else {
-          this.athenticationStatus = false;
-        }
+        this.athenticationUser = data;
       });
   }
 }
