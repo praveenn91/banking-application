@@ -30,16 +30,18 @@ export class AddNewClientComponent {
       phoneNumber: new FormControl(''),
       address: new FormControl(''),
     });
-    this.activatedRoute?.paramMap.subscribe(() => {
+    this.activatedRoute.paramMap.subscribe(() => {
       this.clientData = history.state;
-      this.clientForm.setValue({
-        id: history.state.id,
-        firstName: history.state.firstName,
-        lastName: history.state.lastName,
-        email: history.state.email,
-        phoneNumber: history.state.phoneNumber,
-        address: history.state.address,
-      });
+      console.log(history.state);
+      if (history.state.id) {
+        this.clientForm.setValue({
+          firstName: history.state?.firstName,
+          lastName: history.state?.lastName,
+          email: history.state?.email,
+          phoneNumber: history.state?.phoneNumber,
+          address: history.state?.address,
+        });
+      }
     });
   }
 
@@ -56,6 +58,7 @@ export class AddNewClientComponent {
       };
       this.dataService.updateClient(updatedValues).subscribe((res) => res);
     } else {
+      console.log(this.clientForm.value);
       this.dataService
         .addClient(this.clientForm.value)
         .subscribe((data) => console.log(data));

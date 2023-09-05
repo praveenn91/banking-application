@@ -23,8 +23,10 @@ export class ClientsComponent {
   }
 
   deleteClient(id: string) {
-    this.clients = this.dataService
+    this.dataService
       .deleteClient(id)
-      .subscribe(() => this.dataService.getClients().subscribe((res) => res));
+      .subscribe(() =>
+        this.dataService.getClients().subscribe((res) => (this.clients = res))
+      );
   }
 }

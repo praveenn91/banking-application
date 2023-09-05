@@ -9,7 +9,7 @@ import { Form } from 'src/types';
 export class DataService {
   constructor(private http: HttpClient) {}
   private handleError(error: any) {
-    console.error(error);
+    console.log(error);
     return throwError(error);
   }
   getClients() {
