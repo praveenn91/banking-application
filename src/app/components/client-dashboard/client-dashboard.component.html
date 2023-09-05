@@ -12,9 +12,23 @@
             >New Transaction</a
           >
         </button>
-        <button mat-menu-item>Deposit</button>
-        <button mat-menu-item>Fund transfer</button>
-        <button mat-menu-item>Withdrawal</button>
+        <button mat-menu-item>
+          <a class="nav-link" [routerLink]="['/client-dashboard/make-deposit']"
+            >Make Deposit</a
+          >
+        </button>
+        <button mat-menu-item>
+          <a
+            class="nav-link"
+            [routerLink]="['/client-dashboard/make-fund-transfer']"
+            >Fund Transfer</a
+          >
+        </button>
+        <button mat-menu-item>
+          <a class="nav-link" [routerLink]="['/client-dashboard/withdrawal']"
+            >Withdrawal</a
+          >
+        </button>
       </mat-menu>
       <button mat-button [matMenuTriggerFor]="accounts">Accounts</button>
       <mat-menu #accounts="matMenu">

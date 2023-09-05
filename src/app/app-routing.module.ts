@@ -13,6 +13,9 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { GetAccountByIdComponent } from './components/get-account-by-id/get-account-by-id.component';
 import { AthenticationComponent } from './components/athentication/athentication.component';
 import { NewTransactionComponent } from './components/new-transaction/new-transaction.component';
+import { MakeDepositComponent } from './components/make-deposit/make-deposit.component';
+import { MakeFundTransferComponent } from './components/make-fund-transfer/make-fund-transfer.component';
+import { WithDrawalComponent } from './components/with-drawal/with-drawal.component';
 
 @NgModule({
   declarations: [],
@@ -46,6 +49,9 @@ import { NewTransactionComponent } from './components/new-transaction/new-transa
           { path: 'account-by-id', component: GetAccountByIdComponent },
           { path: 'athentication', component: AthenticationComponent },
           { path: 'new-transaction', component: NewTransactionComponent },
+          { path: 'make-deposit', component: MakeDepositComponent },
+          { path: 'make-fund-transfer', component: MakeFundTransferComponent },
+          { path: 'withdrawal', component: WithDrawalComponent },
         ],
       },
     ]),

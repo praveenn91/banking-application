@@ -24,7 +24,12 @@ export class NewTransactionComponent {
   }
   onSubmit() {
     const transaction = {
-      ...this.newTransaction.value,
+      transactionAmount: parseInt(this.newTransaction.value.transactionAmount),
+      transactionSourceAccount:
+        this.newTransaction.value.transactionSourceAccount,
+      transactionDestinationAccount:
+        this.newTransaction.value.transactionDestinationAccount,
+      transactionType: parseInt(this.newTransaction.value.transactionType),
       transactionDate: new Date(),
     };
     this.dataService.addNewTransaction(transaction).subscribe((res) => res);

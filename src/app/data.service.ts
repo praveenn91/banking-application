@@ -98,7 +98,7 @@ export class DataService {
   }
 
   athenticationAddress(data: any) {
-    const url = `url?athentication=${data.athentication}&password=${data.password}`;
+    const url = `url`;
     return this.http.get(url).pipe(
       tap((data) => data),
       catchError(this.handleError)
@@ -106,6 +106,30 @@ export class DataService {
   }
 
   addNewTransaction(data: any) {
+    const url = '';
+    return this.http.post(url, data).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
+
+  makeDeposit(data: any) {
+    const url = '';
+    return this.http.post(url, data).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
+
+  makeFundTransfer(data: any) {
+    const url = '';
+    return this.http.post(url, data).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
+
+  makeWithdrawal(data: any) {
     const url = '';
     return this.http.post(url, data).pipe(
       tap((data) => data),
