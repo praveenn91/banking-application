@@ -18,7 +18,7 @@ export class CreditCardCompaniesComponent {
 
   deleteCreditCardCompany(data: any) {
     this.dataService
-      .deleteInstitutions(data.id)
+      .deleteCreditCardCompanies(data.id)
       .subscribe(() =>
         this.dataService
           .getCreditCardCompanies()
