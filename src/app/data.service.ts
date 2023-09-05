@@ -99,7 +99,7 @@ export class DataService {
 
   athenticationAddress(data: any) {
     const url = `url`;
-    return this.http.get(url).pipe(
+    return this.http.post(url, data).pipe(
       tap((data) => data),
       catchError(this.handleError)
     );

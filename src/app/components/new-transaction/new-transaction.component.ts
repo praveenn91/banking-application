@@ -35,7 +35,7 @@ export class NewTransactionComponent {
     };
     this.response = this.dataService
       .addNewTransaction(transaction)
-      .subscribe((res) => res);
+      .subscribe((res) => (this.response = res));
   }
 
   goBack() {

@@ -31,7 +31,7 @@ export class MakeDepositComponent {
     };
     this.response = this.dataService
       .makeDeposit(makeDeposit)
-      .subscribe((res) => res);
+      .subscribe((res) => (this.response = res));
   }
 
   goBack() {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/data.service';
+import { Feedbacks } from 'src/types';
 
 @Component({
   selector: 'app-feedback',
@@ -7,9 +8,9 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent {
-  users: any;
+  users!: any;
 
   constructor(private dataService: DataService) {
-    this.users = this.dataService.getFeedback().subscribe((res) => res);
+    this.dataService.getFeedback().subscribe((res) => (this.users = res));
   }
 }

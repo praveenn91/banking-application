@@ -33,3 +33,22 @@ export interface Clients {
 export interface CreditCardCompanies {
   creditCardCompany: Client[];
 }
+
+export interface Product {
+  id: number;
+  name: string;
+  companyId: number;
+}
+
+export interface Feedback {
+  id: number;
+  comment: string;
+  companyId: number;
+}
+
+export interface Feedbacks {
+  id: number;
+  name: string;
+  products: Product[];
+  feedback: Feedback;
+}
