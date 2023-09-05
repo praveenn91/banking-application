@@ -10,7 +10,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class MakeDepositComponent {
   makeDepositForm: FormGroup;
-
+  response: any;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -29,7 +29,9 @@ export class MakeDepositComponent {
       amount: parseInt(this.makeDepositForm.value.amount),
       transactionPin: this.makeDepositForm.value.transactionPin,
     };
-    this.dataService.makeDeposit(makeDeposit).subscribe((res) => res);
+    this.response = this.dataService
+      .makeDeposit(makeDeposit)
+      .subscribe((res) => res);
   }
 
   goBack() {

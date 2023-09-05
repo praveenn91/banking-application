@@ -42,3 +42,21 @@
     </div>
   </div>
 </div>
+<div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Response code</th>
+        <th scope="col">Request Id</th>
+        <th scope="col">Response Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients | searchFilter : filter">
+        <td>{{ respose.responseCode }}</td>
+        <td>{{ response.requestId }}</td>
+        <td>{{ response.responseMessage }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

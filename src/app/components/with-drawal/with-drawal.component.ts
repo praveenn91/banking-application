@@ -10,7 +10,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class WithDrawalComponent {
   withdrawalForm: FormGroup;
-
+  response: any;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -28,7 +28,9 @@ export class WithDrawalComponent {
       ...this.withdrawalForm.value,
       amount: parseInt(this.withdrawalForm.value.amount),
     };
-    this.dataService.makeWithdrawal(withdrawal).subscribe((res) => res);
+    this.response = this.dataService
+      .makeWithdrawal(withdrawal)
+      .subscribe((res) => res);
   }
 
   goBack() {

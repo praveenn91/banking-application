@@ -17,5 +17,12 @@
       "userName": "praveen",
       "password": "pravenn123"
     }
+  ],
+  "creditCardCompany": [
+    {
+      "email": "praveennkappa@gmail.com",
+      "userName": "praveen",
+      "password": "pravenn123"
+    }
   ]
 }

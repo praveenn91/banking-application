@@ -29,3 +29,7 @@ export interface Client {
 export interface Clients {
   clients: Client[];
 }
+
+export interface CreditCardCompanies {
+  creditCardCompany: Client[];
+}

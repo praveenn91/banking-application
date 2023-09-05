@@ -10,6 +10,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class NewTransactionComponent {
   newTransaction: FormGroup;
+  response: any;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -32,7 +33,9 @@ export class NewTransactionComponent {
       transactionType: parseInt(this.newTransaction.value.transactionType),
       transactionDate: new Date(),
     };
-    this.dataService.addNewTransaction(transaction).subscribe((res) => res);
+    this.response = this.dataService
+      .addNewTransaction(transaction)
+      .subscribe((res) => res);
   }
 
   goBack() {

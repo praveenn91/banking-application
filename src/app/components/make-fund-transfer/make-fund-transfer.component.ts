@@ -10,7 +10,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class MakeFundTransferComponent {
   makeFundTransferForm: FormGroup;
-
+  response: any;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -29,7 +29,9 @@ export class MakeFundTransferComponent {
       ...this.makeFundTransferForm.value,
       amount: parseInt(this.makeFundTransferForm.value.amount),
     };
-    this.dataService.makeFundTransfer(makeFund).subscribe((res) => res);
+    this.response = this.dataService
+      .makeFundTransfer(makeFund)
+      .subscribe((res) => res);
   }
 
   goBack() {

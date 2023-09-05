@@ -2,7 +2,14 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from 'src/app/login.service';
-import { Admin, Admins, Client, Clients, Login } from 'src/types';
+import {
+  Admin,
+  Admins,
+  Client,
+  Clients,
+  CreditCardCompanies,
+  Login,
+} from 'src/types';
 
 @Component({
   selector: 'app-login',
@@ -65,6 +72,30 @@ export class LoginComponent {
           );
           if (isClientValid.length !== 0) {
             this.route.navigate(['/client-dashboard'], {
+              state: { name: isClientValid[0].userName },
+            });
+          } else {
+            this.errorMessage = true;
+          }
+        },
+        (error) => {
+          console.error('Request failed with error', error);
+        }
+      );
+    }
+    if (this.loginForm.valid && this.userRole === 'credit-card') {
+      this.loginService.adminLogin().subscribe(
+        (res) => {
+          const isClientValid = (
+            res as CreditCardCompanies
+          ).creditCardCompany.filter((creditCardCompany: Client) => {
+            return (
+              creditCardCompany.email === this.loginForm.value.email &&
+              creditCardCompany.password === this.loginForm.value.password
+            );
+          });
+          if (isClientValid.length !== 0) {
+            this.route.navigate(['/main-credit-card-company'], {
               state: { name: isClientValid[0].userName },
             });
           } else {
