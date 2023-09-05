@@ -45,6 +45,12 @@
       </mat-menu>
       <a
         class="nav-link px-2"
+        [routerLink]="['/client-dashboard/products']"
+        routerLinkActive="active"
+        >Products</a
+      >
+      <a
+        class="nav-link px-2"
         [routerLink]="['/login']"
         routerLinkActive="active"
         [queryParams]="{ page: 'client' }"

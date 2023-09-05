@@ -136,4 +136,12 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+
+  getFeedback() {
+    const url = '';
+    return this.http.get(url).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
 }

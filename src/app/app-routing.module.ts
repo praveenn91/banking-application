@@ -55,6 +55,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
           { path: 'make-deposit', component: MakeDepositComponent },
           { path: 'make-fund-transfer', component: MakeFundTransferComponent },
           { path: 'withdrawal', component: WithDrawalComponent },
+          { path: 'products', component: ProductsComponent },
         ],
       },
       {

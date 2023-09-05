@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-feedback',
@@ -6,22 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent {
-  users = [
-    {
-      id: 1,
-      name: 'sandhya',
-      products: [
-        {
-          id: 1,
-          name: 'sony',
-        },
-      ],
-      feedback: [
-        {
-          id: 1,
-          comment: 'good',
-        },
-      ],
-    },
-  ];
+  users: any;
+
+  constructor(private dataService: DataService) {
+    this.users = this.dataService.getFeedback().subscribe((res) => res);
+  }
 }
