@@ -109,6 +109,8 @@ export class LoginComponent {
     }
   }
   register() {
-    this.route.navigate(['/register']);
+    this.route.navigate(['/register'], {
+      queryParams: { page: this.userRole },
+    });
   }
 }

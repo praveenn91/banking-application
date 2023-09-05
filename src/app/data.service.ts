@@ -144,4 +144,12 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+
+  clientRegistration(data: any) {
+    const url = '';
+    return this.http.post(url, data).pipe(
+      tap((data) => data),
+      catchError(this.handleError)
+    );
+  }
 }

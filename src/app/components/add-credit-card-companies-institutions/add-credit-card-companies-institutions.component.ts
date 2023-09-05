@@ -28,6 +28,10 @@ export class AddCreditCardCompaniesInstitutionsComponent {
 
   onSubmit() {
     if (this.currentPage === 'institutions') {
+      const formData = {
+        institutionName: this.addForm.value.name,
+        discription: this.addForm.value.address,
+      };
       this.dataService
         .addInstitution(this.addForm.value)
         .subscribe((res) => res);

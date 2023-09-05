@@ -30,7 +30,7 @@ export class AddNewClientComponent {
       phoneNumber: new FormControl(''),
       address: new FormControl(''),
     });
-    this.activatedRoute.paramMap.subscribe(() => {
+    this.activatedRoute?.paramMap.subscribe(() => {
       this.clientData = history.state;
       this.clientForm.setValue({
         id: history.state.id,
