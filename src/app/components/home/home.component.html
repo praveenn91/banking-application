@@ -1,37 +1,3 @@
 <div>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Welcome to banking application</span>
-      <button mat-button [matMenuTriggerFor]="menu" class="example-icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <a
-            [routerLink]="['/login']"
-            [queryParams]="{ page: 'admin' }"
-            class="nav-link"
-            >Admin</a
-          >
-        </button>
-        <button mat-menu-item>
-          <a
-            [routerLink]="['/login']"
-            [queryParams]="{ page: 'client' }"
-            class="nav-link"
-            >Client</a
-          >
-        </button>
-        <button mat-menu-item>
-          <a
-            [routerLink]="['/login']"
-            [queryParams]="{ page: 'credit-card' }"
-            class="nav-link"
-            >Credit card</a
-          >
-        </button>
-      </mat-menu>
-    </mat-toolbar-row>
-  </mat-toolbar>
   <div><h1 class="text-center">Banking Application...</h1></div>
 </div>
