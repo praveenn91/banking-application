@@ -10,7 +10,12 @@ import { DataService } from 'src/app/data.service';
 })
 export class WithDrawalComponent {
   withdrawalForm: FormGroup;
-  response: any;
+  response = {
+    responseCode: '0001',
+    requestId: '91be63c1-a78e-4b43-9122-d4dc3804af3b',
+    responseMessage: 'withdrawal successfully',
+  };
+  showResponse = false;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -28,9 +33,8 @@ export class WithDrawalComponent {
       ...this.withdrawalForm.value,
       amount: parseInt(this.withdrawalForm.value.amount),
     };
-    this.response = this.dataService
-      .makeWithdrawal(withdrawal)
-      .subscribe((res) => res);
+    this.dataService.makeWithdrawal(withdrawal).subscribe((res) => res);
+    this.showResponse = true;
   }
 
   goBack() {

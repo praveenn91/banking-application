@@ -10,7 +10,13 @@ import { DataService } from 'src/app/data.service';
 })
 export class MakeDepositComponent {
   makeDepositForm: FormGroup;
-  response: any;
+  response = {
+    responseCode: '001',
+    requestId: '91be63c1-a78e-4b43-9122-d4dc3804af3b',
+    responseMessage: 'deposited successfully',
+  };
+  showResponse = false;
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -29,9 +35,8 @@ export class MakeDepositComponent {
       amount: parseInt(this.makeDepositForm.value.amount),
       transactionPin: this.makeDepositForm.value.transactionPin,
     };
-    this.response = this.dataService
-      .makeDeposit(makeDeposit)
-      .subscribe((res) => (this.response = res));
+    this.dataService.makeDeposit(makeDeposit).subscribe((res) => res);
+    this.showResponse = true;
   }
 
   goBack() {
