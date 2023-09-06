@@ -23,8 +23,8 @@ export class RegistrationComponent {
       lastName: new FormControl(''),
       phoneNumber: new FormControl(''),
       email: new FormControl(''),
-      password: new FormControl(''),
-      confirmPassword: new FormControl(''),
+      pin: new FormControl(''),
+      confirmPin: new FormControl(''),
     });
     this.userRole = this.activatedRoute.snapshot.queryParams['page'];
   }

@@ -152,4 +152,9 @@ export class DataService {
       catchError(this.handleError)
     );
   }
+  feedback: any[] = [];
+  addFeedback(data: any) {
+    this.feedback.push(data);
+    return this.feedback;
+  }
 }
