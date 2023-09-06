@@ -28,6 +28,7 @@ import { MainCreditCardCompanyComponent } from './components/main-credit-card-co
 import { ProductsComponent } from './components/products/products.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ClientFeedbackComponent } from './components/client-feedback/client-feedback.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ClientFeedbackComponent } from './components/client-feedback/client-fee
     MainCreditCardCompanyComponent,
     ProductsComponent,
     FeedbackComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
